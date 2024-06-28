@@ -15,6 +15,7 @@ MapReduce框架的输入是被分割成大量的不同的数据的非常巨大�
 
 最终我们得到整体的通信设计为：
 ![alt text](images/image-1.png)
+
 Map函数的具体模拟方式为：
 ![alt text](images/image-2.png)
 ## 实验过程
