@@ -14,9 +14,11 @@ MapReduce框架的输入是被分割成大量的不同的数据的非常巨大�
 ![alt text](images/image.png)
 
 最终我们得到整体的通信设计为：
+
 ![alt text](images/image-1.png)
 
 Map函数的具体模拟方式为：
+
 ![alt text](images/image-2.png)
 ## 实验过程
 按照架构设计内容，编写[proto3](src/main/proto/task.proto)定义（请求/响应）消息的格式以及Server提供的服务形式。我们定义请求信息包含路径前缀、路径后缀以及需要处理的最大编号。响应信息是一个重复的Map<string, int>。通过grpc依赖生成相应的通信代码，以此为基础具体实现Clients和Servers的类中相关的通信代码。
