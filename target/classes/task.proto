@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package task;
+
+option java_multiple_files = false;
+option java_outer_classname = "TaskMessage";
+option java_package = "com.example.grpc";
+
+service TaskService {
+  rpc processTasks(TaskRequest) returns (TaskResponse) {}
+}
+
+message TaskRequest {
+  string pathPrefix = 1;  // 路径前缀
+  string pathSuffix = 2;  // 路径后缀
+  int32 maxNumber = 3;    // 需要处理的最大编号
+}
+
+message TaskResponse {
+  repeated TaskResult results = 1;
+}
+
+message TaskResult {
+  map<string, int32> result = 1;
+}
