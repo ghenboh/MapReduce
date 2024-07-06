@@ -147,27 +147,3 @@ public class Master {
         }
     }
 }
-
-// System.out.println("test");
-// List<TaskResult> with = response.getResultsList();
-// Map<String, Integer> ret = new HashMap<>();
-// for(TaskResult taskResult: with) {
-//     for(Map.Entry<String, Integer> single: taskResult.getResultMap().entrySet()) {
-        // ret.put(single.getKey().replaceAll("/[a-zA-Z]+$", ""), ret.getOrDefault(single.getKey().replaceAll("/[a-zA-Z]+$", ""), 0) + single.getValue());
-//     }
-// }
-// List<List<String>> terminals = new ArrayList<>();
-// for(Map.Entry<String, Integer> single: ret.entrySet()) {
-//     terminals.add(List.of(single.getKey(), String.valueOf(single.getValue())));
-// }
-// Collections.sort(terminals, (a, b) -> Integer.parseInt(a.get(1)) != Integer.parseInt(b.get(1)) ? Integer.parseInt(b.get(1)) - Integer.parseInt(a.get(1)) : a.get(0).compareTo(b.get(0)));
-// try {
-//     PrintWriter printWriter = new PrintWriter(new File("src\\main\\resources\\text\\100.txt"));
-//     printWriter.println(terminals);
-//     printWriter.println(ret);
-//     for(TaskResult taskResult: with) {
-//         printWriter.println(taskResult.getResultMap());
-//     }
-//     printWriter.flush();
-//     printWriter.close();
-// } catch (Exception e) {e.printStackTrace();}
