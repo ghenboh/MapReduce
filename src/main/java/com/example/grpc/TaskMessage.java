@@ -14,82 +14,30 @@ public final class TaskMessage {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface TaskRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:task.TaskRequest)
+  public interface EmptyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:task.Empty)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * 路径前缀
-     * </pre>
-     *
-     * <code>string pathPrefix = 1;</code>
-     * @return The pathPrefix.
-     */
-    java.lang.String getPathPrefix();
-    /**
-     * <pre>
-     * 路径前缀
-     * </pre>
-     *
-     * <code>string pathPrefix = 1;</code>
-     * @return The bytes for pathPrefix.
-     */
-    com.google.protobuf.ByteString
-        getPathPrefixBytes();
-
-    /**
-     * <pre>
-     * 路径后缀
-     * </pre>
-     *
-     * <code>string pathSuffix = 2;</code>
-     * @return The pathSuffix.
-     */
-    java.lang.String getPathSuffix();
-    /**
-     * <pre>
-     * 路径后缀
-     * </pre>
-     *
-     * <code>string pathSuffix = 2;</code>
-     * @return The bytes for pathSuffix.
-     */
-    com.google.protobuf.ByteString
-        getPathSuffixBytes();
-
-    /**
-     * <pre>
-     * 需要处理的最大编号
-     * </pre>
-     *
-     * <code>int32 maxNumber = 3;</code>
-     * @return The maxNumber.
-     */
-    int getMaxNumber();
   }
   /**
-   * Protobuf type {@code task.TaskRequest}
+   * Protobuf type {@code task.Empty}
    */
-  public static final class TaskRequest extends
+  public static final class Empty extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:task.TaskRequest)
-      TaskRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:task.Empty)
+      EmptyOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use TaskRequest.newBuilder() to construct.
-    private TaskRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Empty.newBuilder() to construct.
+    private Empty(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private TaskRequest() {
-      pathPrefix_ = "";
-      pathSuffix_ = "";
+    private Empty() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new TaskRequest();
+      return new Empty();
     }
 
     @java.lang.Override
@@ -97,7 +45,7 @@ public final class TaskMessage {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TaskRequest(
+    private Empty(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -115,23 +63,6 @@ public final class TaskMessage {
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pathPrefix_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pathSuffix_ = s;
-              break;
-            }
-            case 24: {
-
-              maxNumber_ = input.readInt32();
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -153,122 +84,15 @@ public final class TaskMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.example.grpc.TaskMessage.internal_static_task_TaskRequest_descriptor;
+      return com.example.grpc.TaskMessage.internal_static_task_Empty_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.grpc.TaskMessage.internal_static_task_TaskRequest_fieldAccessorTable
+      return com.example.grpc.TaskMessage.internal_static_task_Empty_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.grpc.TaskMessage.TaskRequest.class, com.example.grpc.TaskMessage.TaskRequest.Builder.class);
-    }
-
-    public static final int PATHPREFIX_FIELD_NUMBER = 1;
-    private volatile java.lang.Object pathPrefix_;
-    /**
-     * <pre>
-     * 路径前缀
-     * </pre>
-     *
-     * <code>string pathPrefix = 1;</code>
-     * @return The pathPrefix.
-     */
-    @java.lang.Override
-    public java.lang.String getPathPrefix() {
-      java.lang.Object ref = pathPrefix_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pathPrefix_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 路径前缀
-     * </pre>
-     *
-     * <code>string pathPrefix = 1;</code>
-     * @return The bytes for pathPrefix.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPathPrefixBytes() {
-      java.lang.Object ref = pathPrefix_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pathPrefix_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PATHSUFFIX_FIELD_NUMBER = 2;
-    private volatile java.lang.Object pathSuffix_;
-    /**
-     * <pre>
-     * 路径后缀
-     * </pre>
-     *
-     * <code>string pathSuffix = 2;</code>
-     * @return The pathSuffix.
-     */
-    @java.lang.Override
-    public java.lang.String getPathSuffix() {
-      java.lang.Object ref = pathSuffix_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pathSuffix_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * 路径后缀
-     * </pre>
-     *
-     * <code>string pathSuffix = 2;</code>
-     * @return The bytes for pathSuffix.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPathSuffixBytes() {
-      java.lang.Object ref = pathSuffix_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pathSuffix_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int MAXNUMBER_FIELD_NUMBER = 3;
-    private int maxNumber_;
-    /**
-     * <pre>
-     * 需要处理的最大编号
-     * </pre>
-     *
-     * <code>int32 maxNumber = 3;</code>
-     * @return The maxNumber.
-     */
-    @java.lang.Override
-    public int getMaxNumber() {
-      return maxNumber_;
+              com.example.grpc.TaskMessage.Empty.class, com.example.grpc.TaskMessage.Empty.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -285,15 +109,6 @@ public final class TaskMessage {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPathPrefixBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pathPrefix_);
-      }
-      if (!getPathSuffixBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pathSuffix_);
-      }
-      if (maxNumber_ != 0) {
-        output.writeInt32(3, maxNumber_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -303,16 +118,6 @@ public final class TaskMessage {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPathPrefixBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pathPrefix_);
-      }
-      if (!getPathSuffixBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pathSuffix_);
-      }
-      if (maxNumber_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, maxNumber_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -323,17 +128,11 @@ public final class TaskMessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.grpc.TaskMessage.TaskRequest)) {
+      if (!(obj instanceof com.example.grpc.TaskMessage.Empty)) {
         return super.equals(obj);
       }
-      com.example.grpc.TaskMessage.TaskRequest other = (com.example.grpc.TaskMessage.TaskRequest) obj;
+      com.example.grpc.TaskMessage.Empty other = (com.example.grpc.TaskMessage.Empty) obj;
 
-      if (!getPathPrefix()
-          .equals(other.getPathPrefix())) return false;
-      if (!getPathSuffix()
-          .equals(other.getPathSuffix())) return false;
-      if (getMaxNumber()
-          != other.getMaxNumber()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -345,80 +144,74 @@ public final class TaskMessage {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PATHPREFIX_FIELD_NUMBER;
-      hash = (53 * hash) + getPathPrefix().hashCode();
-      hash = (37 * hash) + PATHSUFFIX_FIELD_NUMBER;
-      hash = (53 * hash) + getPathSuffix().hashCode();
-      hash = (37 * hash) + MAXNUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + getMaxNumber();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.example.grpc.TaskMessage.TaskRequest parseFrom(
+    public static com.example.grpc.TaskMessage.Empty parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.grpc.TaskMessage.TaskRequest parseFrom(
+    public static com.example.grpc.TaskMessage.Empty parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskRequest parseFrom(
+    public static com.example.grpc.TaskMessage.Empty parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.grpc.TaskMessage.TaskRequest parseFrom(
+    public static com.example.grpc.TaskMessage.Empty parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskRequest parseFrom(byte[] data)
+    public static com.example.grpc.TaskMessage.Empty parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.grpc.TaskMessage.TaskRequest parseFrom(
+    public static com.example.grpc.TaskMessage.Empty parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskRequest parseFrom(java.io.InputStream input)
+    public static com.example.grpc.TaskMessage.Empty parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.grpc.TaskMessage.TaskRequest parseFrom(
+    public static com.example.grpc.TaskMessage.Empty parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.example.grpc.TaskMessage.Empty parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.grpc.TaskMessage.TaskRequest parseDelimitedFrom(
+    public static com.example.grpc.TaskMessage.Empty parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskRequest parseFrom(
+    public static com.example.grpc.TaskMessage.Empty parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.grpc.TaskMessage.TaskRequest parseFrom(
+    public static com.example.grpc.TaskMessage.Empty parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -431,7 +224,7 @@ public final class TaskMessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.grpc.TaskMessage.TaskRequest prototype) {
+    public static Builder newBuilder(com.example.grpc.TaskMessage.Empty prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -447,26 +240,26 @@ public final class TaskMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code task.TaskRequest}
+     * Protobuf type {@code task.Empty}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:task.TaskRequest)
-        com.example.grpc.TaskMessage.TaskRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:task.Empty)
+        com.example.grpc.TaskMessage.EmptyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.example.grpc.TaskMessage.internal_static_task_TaskRequest_descriptor;
+        return com.example.grpc.TaskMessage.internal_static_task_Empty_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.grpc.TaskMessage.internal_static_task_TaskRequest_fieldAccessorTable
+        return com.example.grpc.TaskMessage.internal_static_task_Empty_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.grpc.TaskMessage.TaskRequest.class, com.example.grpc.TaskMessage.TaskRequest.Builder.class);
+                com.example.grpc.TaskMessage.Empty.class, com.example.grpc.TaskMessage.Empty.Builder.class);
       }
 
-      // Construct using com.example.grpc.TaskMessage.TaskRequest.newBuilder()
+      // Construct using com.example.grpc.TaskMessage.Empty.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -484,29 +277,23 @@ public final class TaskMessage {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        pathPrefix_ = "";
-
-        pathSuffix_ = "";
-
-        maxNumber_ = 0;
-
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.grpc.TaskMessage.internal_static_task_TaskRequest_descriptor;
+        return com.example.grpc.TaskMessage.internal_static_task_Empty_descriptor;
       }
 
       @java.lang.Override
-      public com.example.grpc.TaskMessage.TaskRequest getDefaultInstanceForType() {
-        return com.example.grpc.TaskMessage.TaskRequest.getDefaultInstance();
+      public com.example.grpc.TaskMessage.Empty getDefaultInstanceForType() {
+        return com.example.grpc.TaskMessage.Empty.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.example.grpc.TaskMessage.TaskRequest build() {
-        com.example.grpc.TaskMessage.TaskRequest result = buildPartial();
+      public com.example.grpc.TaskMessage.Empty build() {
+        com.example.grpc.TaskMessage.Empty result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -514,11 +301,8 @@ public final class TaskMessage {
       }
 
       @java.lang.Override
-      public com.example.grpc.TaskMessage.TaskRequest buildPartial() {
-        com.example.grpc.TaskMessage.TaskRequest result = new com.example.grpc.TaskMessage.TaskRequest(this);
-        result.pathPrefix_ = pathPrefix_;
-        result.pathSuffix_ = pathSuffix_;
-        result.maxNumber_ = maxNumber_;
+      public com.example.grpc.TaskMessage.Empty buildPartial() {
+        com.example.grpc.TaskMessage.Empty result = new com.example.grpc.TaskMessage.Empty(this);
         onBuilt();
         return result;
       }
@@ -557,26 +341,507 @@ public final class TaskMessage {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.grpc.TaskMessage.TaskRequest) {
-          return mergeFrom((com.example.grpc.TaskMessage.TaskRequest)other);
+        if (other instanceof com.example.grpc.TaskMessage.Empty) {
+          return mergeFrom((com.example.grpc.TaskMessage.Empty)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.grpc.TaskMessage.TaskRequest other) {
-        if (other == com.example.grpc.TaskMessage.TaskRequest.getDefaultInstance()) return this;
-        if (!other.getPathPrefix().isEmpty()) {
-          pathPrefix_ = other.pathPrefix_;
-          onChanged();
+      public Builder mergeFrom(com.example.grpc.TaskMessage.Empty other) {
+        if (other == com.example.grpc.TaskMessage.Empty.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.example.grpc.TaskMessage.Empty parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.example.grpc.TaskMessage.Empty) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
         }
-        if (!other.getPathSuffix().isEmpty()) {
-          pathSuffix_ = other.pathSuffix_;
-          onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:task.Empty)
+    }
+
+    // @@protoc_insertion_point(class_scope:task.Empty)
+    private static final com.example.grpc.TaskMessage.Empty DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.example.grpc.TaskMessage.Empty();
+    }
+
+    public static com.example.grpc.TaskMessage.Empty getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Empty>
+        PARSER = new com.google.protobuf.AbstractParser<Empty>() {
+      @java.lang.Override
+      public Empty parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Empty(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Empty> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Empty> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.example.grpc.TaskMessage.Empty getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StringResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:task.StringResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string message = 1;</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 1;</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+  }
+  /**
+   * Protobuf type {@code task.StringResponse}
+   */
+  public static final class StringResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:task.StringResponse)
+      StringResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StringResponse.newBuilder() to construct.
+    private StringResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StringResponse() {
+      message_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StringResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StringResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              message_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
         }
-        if (other.getMaxNumber() != 0) {
-          setMaxNumber(other.getMaxNumber());
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.example.grpc.TaskMessage.internal_static_task_StringResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.example.grpc.TaskMessage.internal_static_task_StringResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.example.grpc.TaskMessage.StringResponse.class, com.example.grpc.TaskMessage.StringResponse.Builder.class);
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object message_;
+    /**
+     * <code>string message = 1;</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message = 1;</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getMessageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getMessageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.example.grpc.TaskMessage.StringResponse)) {
+        return super.equals(obj);
+      }
+      com.example.grpc.TaskMessage.StringResponse other = (com.example.grpc.TaskMessage.StringResponse) obj;
+
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.example.grpc.TaskMessage.StringResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.grpc.TaskMessage.StringResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.grpc.TaskMessage.StringResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.grpc.TaskMessage.StringResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.grpc.TaskMessage.StringResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.grpc.TaskMessage.StringResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.grpc.TaskMessage.StringResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.example.grpc.TaskMessage.StringResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.example.grpc.TaskMessage.StringResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.example.grpc.TaskMessage.StringResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.example.grpc.TaskMessage.StringResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.example.grpc.TaskMessage.StringResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.example.grpc.TaskMessage.StringResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code task.StringResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:task.StringResponse)
+        com.example.grpc.TaskMessage.StringResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.example.grpc.TaskMessage.internal_static_task_StringResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.example.grpc.TaskMessage.internal_static_task_StringResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.example.grpc.TaskMessage.StringResponse.class, com.example.grpc.TaskMessage.StringResponse.Builder.class);
+      }
+
+      // Construct using com.example.grpc.TaskMessage.StringResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        message_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.example.grpc.TaskMessage.internal_static_task_StringResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.example.grpc.TaskMessage.StringResponse getDefaultInstanceForType() {
+        return com.example.grpc.TaskMessage.StringResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.example.grpc.TaskMessage.StringResponse build() {
+        com.example.grpc.TaskMessage.StringResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.example.grpc.TaskMessage.StringResponse buildPartial() {
+        com.example.grpc.TaskMessage.StringResponse result = new com.example.grpc.TaskMessage.StringResponse(this);
+        result.message_ = message_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.example.grpc.TaskMessage.StringResponse) {
+          return mergeFrom((com.example.grpc.TaskMessage.StringResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.example.grpc.TaskMessage.StringResponse other) {
+        if (other == com.example.grpc.TaskMessage.StringResponse.getDefaultInstance()) return this;
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -593,11 +858,11 @@ public final class TaskMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.grpc.TaskMessage.TaskRequest parsedMessage = null;
+        com.example.grpc.TaskMessage.StringResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.grpc.TaskMessage.TaskRequest) e.getUnfinishedMessage();
+          parsedMessage = (com.example.grpc.TaskMessage.StringResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -607,237 +872,78 @@ public final class TaskMessage {
         return this;
       }
 
-      private java.lang.Object pathPrefix_ = "";
+      private java.lang.Object message_ = "";
       /**
-       * <pre>
-       * 路径前缀
-       * </pre>
-       *
-       * <code>string pathPrefix = 1;</code>
-       * @return The pathPrefix.
+       * <code>string message = 1;</code>
+       * @return The message.
        */
-      public java.lang.String getPathPrefix() {
-        java.lang.Object ref = pathPrefix_;
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          pathPrefix_ = s;
+          message_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <pre>
-       * 路径前缀
-       * </pre>
-       *
-       * <code>string pathPrefix = 1;</code>
-       * @return The bytes for pathPrefix.
+       * <code>string message = 1;</code>
+       * @return The bytes for message.
        */
       public com.google.protobuf.ByteString
-          getPathPrefixBytes() {
-        java.lang.Object ref = pathPrefix_;
+          getMessageBytes() {
+        java.lang.Object ref = message_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          pathPrefix_ = b;
+          message_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <pre>
-       * 路径前缀
-       * </pre>
-       *
-       * <code>string pathPrefix = 1;</code>
-       * @param value The pathPrefix to set.
+       * <code>string message = 1;</code>
+       * @param value The message to set.
        * @return This builder for chaining.
        */
-      public Builder setPathPrefix(
+      public Builder setMessage(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        pathPrefix_ = value;
+        message_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * 路径前缀
-       * </pre>
-       *
-       * <code>string pathPrefix = 1;</code>
+       * <code>string message = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPathPrefix() {
+      public Builder clearMessage() {
         
-        pathPrefix_ = getDefaultInstance().getPathPrefix();
+        message_ = getDefaultInstance().getMessage();
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * 路径前缀
-       * </pre>
-       *
-       * <code>string pathPrefix = 1;</code>
-       * @param value The bytes for pathPrefix to set.
+       * <code>string message = 1;</code>
+       * @param value The bytes for message to set.
        * @return This builder for chaining.
        */
-      public Builder setPathPrefixBytes(
+      public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        pathPrefix_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object pathSuffix_ = "";
-      /**
-       * <pre>
-       * 路径后缀
-       * </pre>
-       *
-       * <code>string pathSuffix = 2;</code>
-       * @return The pathSuffix.
-       */
-      public java.lang.String getPathSuffix() {
-        java.lang.Object ref = pathSuffix_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pathSuffix_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 路径后缀
-       * </pre>
-       *
-       * <code>string pathSuffix = 2;</code>
-       * @return The bytes for pathSuffix.
-       */
-      public com.google.protobuf.ByteString
-          getPathSuffixBytes() {
-        java.lang.Object ref = pathSuffix_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pathSuffix_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * 路径后缀
-       * </pre>
-       *
-       * <code>string pathSuffix = 2;</code>
-       * @param value The pathSuffix to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPathSuffix(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pathSuffix_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 路径后缀
-       * </pre>
-       *
-       * <code>string pathSuffix = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPathSuffix() {
-        
-        pathSuffix_ = getDefaultInstance().getPathSuffix();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 路径后缀
-       * </pre>
-       *
-       * <code>string pathSuffix = 2;</code>
-       * @param value The bytes for pathSuffix to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPathSuffixBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        pathSuffix_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int maxNumber_ ;
-      /**
-       * <pre>
-       * 需要处理的最大编号
-       * </pre>
-       *
-       * <code>int32 maxNumber = 3;</code>
-       * @return The maxNumber.
-       */
-      @java.lang.Override
-      public int getMaxNumber() {
-        return maxNumber_;
-      }
-      /**
-       * <pre>
-       * 需要处理的最大编号
-       * </pre>
-       *
-       * <code>int32 maxNumber = 3;</code>
-       * @param value The maxNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaxNumber(int value) {
-        
-        maxNumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 需要处理的最大编号
-       * </pre>
-       *
-       * <code>int32 maxNumber = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMaxNumber() {
-        
-        maxNumber_ = 0;
+        message_ = value;
         onChanged();
         return this;
       }
@@ -854,95 +960,95 @@ public final class TaskMessage {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:task.TaskRequest)
+      // @@protoc_insertion_point(builder_scope:task.StringResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:task.TaskRequest)
-    private static final com.example.grpc.TaskMessage.TaskRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:task.StringResponse)
+    private static final com.example.grpc.TaskMessage.StringResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.grpc.TaskMessage.TaskRequest();
+      DEFAULT_INSTANCE = new com.example.grpc.TaskMessage.StringResponse();
     }
 
-    public static com.example.grpc.TaskMessage.TaskRequest getDefaultInstance() {
+    public static com.example.grpc.TaskMessage.StringResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TaskRequest>
-        PARSER = new com.google.protobuf.AbstractParser<TaskRequest>() {
+    private static final com.google.protobuf.Parser<StringResponse>
+        PARSER = new com.google.protobuf.AbstractParser<StringResponse>() {
       @java.lang.Override
-      public TaskRequest parsePartialFrom(
+      public StringResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TaskRequest(input, extensionRegistry);
+        return new StringResponse(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<TaskRequest> parser() {
+    public static com.google.protobuf.Parser<StringResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<TaskRequest> getParserForType() {
+    public com.google.protobuf.Parser<StringResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.example.grpc.TaskMessage.TaskRequest getDefaultInstanceForType() {
+    public com.example.grpc.TaskMessage.StringResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface TaskResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:task.TaskResponse)
+  public interface ListStringListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:task.ListStringListResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .task.TaskResult results = 1;</code>
+     * <code>repeated .task.StringListResponse messages = 1;</code>
      */
-    java.util.List<com.example.grpc.TaskMessage.TaskResult> 
-        getResultsList();
+    java.util.List<com.example.grpc.TaskMessage.StringListResponse> 
+        getMessagesList();
     /**
-     * <code>repeated .task.TaskResult results = 1;</code>
+     * <code>repeated .task.StringListResponse messages = 1;</code>
      */
-    com.example.grpc.TaskMessage.TaskResult getResults(int index);
+    com.example.grpc.TaskMessage.StringListResponse getMessages(int index);
     /**
-     * <code>repeated .task.TaskResult results = 1;</code>
+     * <code>repeated .task.StringListResponse messages = 1;</code>
      */
-    int getResultsCount();
+    int getMessagesCount();
     /**
-     * <code>repeated .task.TaskResult results = 1;</code>
+     * <code>repeated .task.StringListResponse messages = 1;</code>
      */
-    java.util.List<? extends com.example.grpc.TaskMessage.TaskResultOrBuilder> 
-        getResultsOrBuilderList();
+    java.util.List<? extends com.example.grpc.TaskMessage.StringListResponseOrBuilder> 
+        getMessagesOrBuilderList();
     /**
-     * <code>repeated .task.TaskResult results = 1;</code>
+     * <code>repeated .task.StringListResponse messages = 1;</code>
      */
-    com.example.grpc.TaskMessage.TaskResultOrBuilder getResultsOrBuilder(
+    com.example.grpc.TaskMessage.StringListResponseOrBuilder getMessagesOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code task.TaskResponse}
+   * Protobuf type {@code task.ListStringListResponse}
    */
-  public static final class TaskResponse extends
+  public static final class ListStringListResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:task.TaskResponse)
-      TaskResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:task.ListStringListResponse)
+      ListStringListResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use TaskResponse.newBuilder() to construct.
-    private TaskResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ListStringListResponse.newBuilder() to construct.
+    private ListStringListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private TaskResponse() {
-      results_ = java.util.Collections.emptyList();
+    private ListStringListResponse() {
+      messages_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new TaskResponse();
+      return new ListStringListResponse();
     }
 
     @java.lang.Override
@@ -950,7 +1056,7 @@ public final class TaskMessage {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TaskResponse(
+    private ListStringListResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -971,11 +1077,11 @@ public final class TaskMessage {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                results_ = new java.util.ArrayList<com.example.grpc.TaskMessage.TaskResult>();
+                messages_ = new java.util.ArrayList<com.example.grpc.TaskMessage.StringListResponse>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              results_.add(
-                  input.readMessage(com.example.grpc.TaskMessage.TaskResult.parser(), extensionRegistry));
+              messages_.add(
+                  input.readMessage(com.example.grpc.TaskMessage.StringListResponse.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -994,7 +1100,7 @@ public final class TaskMessage {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          results_ = java.util.Collections.unmodifiableList(results_);
+          messages_ = java.util.Collections.unmodifiableList(messages_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1002,55 +1108,55 @@ public final class TaskMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.example.grpc.TaskMessage.internal_static_task_TaskResponse_descriptor;
+      return com.example.grpc.TaskMessage.internal_static_task_ListStringListResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.grpc.TaskMessage.internal_static_task_TaskResponse_fieldAccessorTable
+      return com.example.grpc.TaskMessage.internal_static_task_ListStringListResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.grpc.TaskMessage.TaskResponse.class, com.example.grpc.TaskMessage.TaskResponse.Builder.class);
+              com.example.grpc.TaskMessage.ListStringListResponse.class, com.example.grpc.TaskMessage.ListStringListResponse.Builder.class);
     }
 
-    public static final int RESULTS_FIELD_NUMBER = 1;
-    private java.util.List<com.example.grpc.TaskMessage.TaskResult> results_;
+    public static final int MESSAGES_FIELD_NUMBER = 1;
+    private java.util.List<com.example.grpc.TaskMessage.StringListResponse> messages_;
     /**
-     * <code>repeated .task.TaskResult results = 1;</code>
+     * <code>repeated .task.StringListResponse messages = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<com.example.grpc.TaskMessage.TaskResult> getResultsList() {
-      return results_;
+    public java.util.List<com.example.grpc.TaskMessage.StringListResponse> getMessagesList() {
+      return messages_;
     }
     /**
-     * <code>repeated .task.TaskResult results = 1;</code>
+     * <code>repeated .task.StringListResponse messages = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.example.grpc.TaskMessage.TaskResultOrBuilder> 
-        getResultsOrBuilderList() {
-      return results_;
+    public java.util.List<? extends com.example.grpc.TaskMessage.StringListResponseOrBuilder> 
+        getMessagesOrBuilderList() {
+      return messages_;
     }
     /**
-     * <code>repeated .task.TaskResult results = 1;</code>
+     * <code>repeated .task.StringListResponse messages = 1;</code>
      */
     @java.lang.Override
-    public int getResultsCount() {
-      return results_.size();
+    public int getMessagesCount() {
+      return messages_.size();
     }
     /**
-     * <code>repeated .task.TaskResult results = 1;</code>
+     * <code>repeated .task.StringListResponse messages = 1;</code>
      */
     @java.lang.Override
-    public com.example.grpc.TaskMessage.TaskResult getResults(int index) {
-      return results_.get(index);
+    public com.example.grpc.TaskMessage.StringListResponse getMessages(int index) {
+      return messages_.get(index);
     }
     /**
-     * <code>repeated .task.TaskResult results = 1;</code>
+     * <code>repeated .task.StringListResponse messages = 1;</code>
      */
     @java.lang.Override
-    public com.example.grpc.TaskMessage.TaskResultOrBuilder getResultsOrBuilder(
+    public com.example.grpc.TaskMessage.StringListResponseOrBuilder getMessagesOrBuilder(
         int index) {
-      return results_.get(index);
+      return messages_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1067,8 +1173,8 @@ public final class TaskMessage {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < results_.size(); i++) {
-        output.writeMessage(1, results_.get(i));
+      for (int i = 0; i < messages_.size(); i++) {
+        output.writeMessage(1, messages_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1079,9 +1185,9 @@ public final class TaskMessage {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < results_.size(); i++) {
+      for (int i = 0; i < messages_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, results_.get(i));
+          .computeMessageSize(1, messages_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1093,13 +1199,13 @@ public final class TaskMessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.grpc.TaskMessage.TaskResponse)) {
+      if (!(obj instanceof com.example.grpc.TaskMessage.ListStringListResponse)) {
         return super.equals(obj);
       }
-      com.example.grpc.TaskMessage.TaskResponse other = (com.example.grpc.TaskMessage.TaskResponse) obj;
+      com.example.grpc.TaskMessage.ListStringListResponse other = (com.example.grpc.TaskMessage.ListStringListResponse) obj;
 
-      if (!getResultsList()
-          .equals(other.getResultsList())) return false;
+      if (!getMessagesList()
+          .equals(other.getMessagesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1111,78 +1217,78 @@ public final class TaskMessage {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getResultsCount() > 0) {
-        hash = (37 * hash) + RESULTS_FIELD_NUMBER;
-        hash = (53 * hash) + getResultsList().hashCode();
+      if (getMessagesCount() > 0) {
+        hash = (37 * hash) + MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getMessagesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.example.grpc.TaskMessage.TaskResponse parseFrom(
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.grpc.TaskMessage.TaskResponse parseFrom(
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskResponse parseFrom(
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.grpc.TaskMessage.TaskResponse parseFrom(
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskResponse parseFrom(byte[] data)
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.grpc.TaskMessage.TaskResponse parseFrom(
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskResponse parseFrom(java.io.InputStream input)
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.grpc.TaskMessage.TaskResponse parseFrom(
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.grpc.TaskMessage.TaskResponse parseDelimitedFrom(
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskResponse parseFrom(
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.grpc.TaskMessage.TaskResponse parseFrom(
+    public static com.example.grpc.TaskMessage.ListStringListResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1195,7 +1301,7 @@ public final class TaskMessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.grpc.TaskMessage.TaskResponse prototype) {
+    public static Builder newBuilder(com.example.grpc.TaskMessage.ListStringListResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1211,26 +1317,26 @@ public final class TaskMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code task.TaskResponse}
+     * Protobuf type {@code task.ListStringListResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:task.TaskResponse)
-        com.example.grpc.TaskMessage.TaskResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:task.ListStringListResponse)
+        com.example.grpc.TaskMessage.ListStringListResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.example.grpc.TaskMessage.internal_static_task_TaskResponse_descriptor;
+        return com.example.grpc.TaskMessage.internal_static_task_ListStringListResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.grpc.TaskMessage.internal_static_task_TaskResponse_fieldAccessorTable
+        return com.example.grpc.TaskMessage.internal_static_task_ListStringListResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.grpc.TaskMessage.TaskResponse.class, com.example.grpc.TaskMessage.TaskResponse.Builder.class);
+                com.example.grpc.TaskMessage.ListStringListResponse.class, com.example.grpc.TaskMessage.ListStringListResponse.Builder.class);
       }
 
-      // Construct using com.example.grpc.TaskMessage.TaskResponse.newBuilder()
+      // Construct using com.example.grpc.TaskMessage.ListStringListResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1243,17 +1349,17 @@ public final class TaskMessage {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getResultsFieldBuilder();
+          getMessagesFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (resultsBuilder_ == null) {
-          results_ = java.util.Collections.emptyList();
+        if (messagesBuilder_ == null) {
+          messages_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          resultsBuilder_.clear();
+          messagesBuilder_.clear();
         }
         return this;
       }
@@ -1261,17 +1367,17 @@ public final class TaskMessage {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.grpc.TaskMessage.internal_static_task_TaskResponse_descriptor;
+        return com.example.grpc.TaskMessage.internal_static_task_ListStringListResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.example.grpc.TaskMessage.TaskResponse getDefaultInstanceForType() {
-        return com.example.grpc.TaskMessage.TaskResponse.getDefaultInstance();
+      public com.example.grpc.TaskMessage.ListStringListResponse getDefaultInstanceForType() {
+        return com.example.grpc.TaskMessage.ListStringListResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.example.grpc.TaskMessage.TaskResponse build() {
-        com.example.grpc.TaskMessage.TaskResponse result = buildPartial();
+      public com.example.grpc.TaskMessage.ListStringListResponse build() {
+        com.example.grpc.TaskMessage.ListStringListResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1279,17 +1385,17 @@ public final class TaskMessage {
       }
 
       @java.lang.Override
-      public com.example.grpc.TaskMessage.TaskResponse buildPartial() {
-        com.example.grpc.TaskMessage.TaskResponse result = new com.example.grpc.TaskMessage.TaskResponse(this);
+      public com.example.grpc.TaskMessage.ListStringListResponse buildPartial() {
+        com.example.grpc.TaskMessage.ListStringListResponse result = new com.example.grpc.TaskMessage.ListStringListResponse(this);
         int from_bitField0_ = bitField0_;
-        if (resultsBuilder_ == null) {
+        if (messagesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            results_ = java.util.Collections.unmodifiableList(results_);
+            messages_ = java.util.Collections.unmodifiableList(messages_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.results_ = results_;
+          result.messages_ = messages_;
         } else {
-          result.results_ = resultsBuilder_.build();
+          result.messages_ = messagesBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1329,39 +1435,39 @@ public final class TaskMessage {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.grpc.TaskMessage.TaskResponse) {
-          return mergeFrom((com.example.grpc.TaskMessage.TaskResponse)other);
+        if (other instanceof com.example.grpc.TaskMessage.ListStringListResponse) {
+          return mergeFrom((com.example.grpc.TaskMessage.ListStringListResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.grpc.TaskMessage.TaskResponse other) {
-        if (other == com.example.grpc.TaskMessage.TaskResponse.getDefaultInstance()) return this;
-        if (resultsBuilder_ == null) {
-          if (!other.results_.isEmpty()) {
-            if (results_.isEmpty()) {
-              results_ = other.results_;
+      public Builder mergeFrom(com.example.grpc.TaskMessage.ListStringListResponse other) {
+        if (other == com.example.grpc.TaskMessage.ListStringListResponse.getDefaultInstance()) return this;
+        if (messagesBuilder_ == null) {
+          if (!other.messages_.isEmpty()) {
+            if (messages_.isEmpty()) {
+              messages_ = other.messages_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureResultsIsMutable();
-              results_.addAll(other.results_);
+              ensureMessagesIsMutable();
+              messages_.addAll(other.messages_);
             }
             onChanged();
           }
         } else {
-          if (!other.results_.isEmpty()) {
-            if (resultsBuilder_.isEmpty()) {
-              resultsBuilder_.dispose();
-              resultsBuilder_ = null;
-              results_ = other.results_;
+          if (!other.messages_.isEmpty()) {
+            if (messagesBuilder_.isEmpty()) {
+              messagesBuilder_.dispose();
+              messagesBuilder_ = null;
+              messages_ = other.messages_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              resultsBuilder_ = 
+              messagesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getResultsFieldBuilder() : null;
+                   getMessagesFieldBuilder() : null;
             } else {
-              resultsBuilder_.addAllMessages(other.results_);
+              messagesBuilder_.addAllMessages(other.messages_);
             }
           }
         }
@@ -1380,11 +1486,11 @@ public final class TaskMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.grpc.TaskMessage.TaskResponse parsedMessage = null;
+        com.example.grpc.TaskMessage.ListStringListResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.grpc.TaskMessage.TaskResponse) e.getUnfinishedMessage();
+          parsedMessage = (com.example.grpc.TaskMessage.ListStringListResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1395,244 +1501,244 @@ public final class TaskMessage {
       }
       private int bitField0_;
 
-      private java.util.List<com.example.grpc.TaskMessage.TaskResult> results_ =
+      private java.util.List<com.example.grpc.TaskMessage.StringListResponse> messages_ =
         java.util.Collections.emptyList();
-      private void ensureResultsIsMutable() {
+      private void ensureMessagesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          results_ = new java.util.ArrayList<com.example.grpc.TaskMessage.TaskResult>(results_);
+          messages_ = new java.util.ArrayList<com.example.grpc.TaskMessage.StringListResponse>(messages_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.example.grpc.TaskMessage.TaskResult, com.example.grpc.TaskMessage.TaskResult.Builder, com.example.grpc.TaskMessage.TaskResultOrBuilder> resultsBuilder_;
+          com.example.grpc.TaskMessage.StringListResponse, com.example.grpc.TaskMessage.StringListResponse.Builder, com.example.grpc.TaskMessage.StringListResponseOrBuilder> messagesBuilder_;
 
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public java.util.List<com.example.grpc.TaskMessage.TaskResult> getResultsList() {
-        if (resultsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(results_);
+      public java.util.List<com.example.grpc.TaskMessage.StringListResponse> getMessagesList() {
+        if (messagesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(messages_);
         } else {
-          return resultsBuilder_.getMessageList();
+          return messagesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public int getResultsCount() {
-        if (resultsBuilder_ == null) {
-          return results_.size();
+      public int getMessagesCount() {
+        if (messagesBuilder_ == null) {
+          return messages_.size();
         } else {
-          return resultsBuilder_.getCount();
+          return messagesBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public com.example.grpc.TaskMessage.TaskResult getResults(int index) {
-        if (resultsBuilder_ == null) {
-          return results_.get(index);
+      public com.example.grpc.TaskMessage.StringListResponse getMessages(int index) {
+        if (messagesBuilder_ == null) {
+          return messages_.get(index);
         } else {
-          return resultsBuilder_.getMessage(index);
+          return messagesBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public Builder setResults(
-          int index, com.example.grpc.TaskMessage.TaskResult value) {
-        if (resultsBuilder_ == null) {
+      public Builder setMessages(
+          int index, com.example.grpc.TaskMessage.StringListResponse value) {
+        if (messagesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureResultsIsMutable();
-          results_.set(index, value);
+          ensureMessagesIsMutable();
+          messages_.set(index, value);
           onChanged();
         } else {
-          resultsBuilder_.setMessage(index, value);
+          messagesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public Builder setResults(
-          int index, com.example.grpc.TaskMessage.TaskResult.Builder builderForValue) {
-        if (resultsBuilder_ == null) {
-          ensureResultsIsMutable();
-          results_.set(index, builderForValue.build());
+      public Builder setMessages(
+          int index, com.example.grpc.TaskMessage.StringListResponse.Builder builderForValue) {
+        if (messagesBuilder_ == null) {
+          ensureMessagesIsMutable();
+          messages_.set(index, builderForValue.build());
           onChanged();
         } else {
-          resultsBuilder_.setMessage(index, builderForValue.build());
+          messagesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public Builder addResults(com.example.grpc.TaskMessage.TaskResult value) {
-        if (resultsBuilder_ == null) {
+      public Builder addMessages(com.example.grpc.TaskMessage.StringListResponse value) {
+        if (messagesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureResultsIsMutable();
-          results_.add(value);
+          ensureMessagesIsMutable();
+          messages_.add(value);
           onChanged();
         } else {
-          resultsBuilder_.addMessage(value);
+          messagesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public Builder addResults(
-          int index, com.example.grpc.TaskMessage.TaskResult value) {
-        if (resultsBuilder_ == null) {
+      public Builder addMessages(
+          int index, com.example.grpc.TaskMessage.StringListResponse value) {
+        if (messagesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureResultsIsMutable();
-          results_.add(index, value);
+          ensureMessagesIsMutable();
+          messages_.add(index, value);
           onChanged();
         } else {
-          resultsBuilder_.addMessage(index, value);
+          messagesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public Builder addResults(
-          com.example.grpc.TaskMessage.TaskResult.Builder builderForValue) {
-        if (resultsBuilder_ == null) {
-          ensureResultsIsMutable();
-          results_.add(builderForValue.build());
+      public Builder addMessages(
+          com.example.grpc.TaskMessage.StringListResponse.Builder builderForValue) {
+        if (messagesBuilder_ == null) {
+          ensureMessagesIsMutable();
+          messages_.add(builderForValue.build());
           onChanged();
         } else {
-          resultsBuilder_.addMessage(builderForValue.build());
+          messagesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public Builder addResults(
-          int index, com.example.grpc.TaskMessage.TaskResult.Builder builderForValue) {
-        if (resultsBuilder_ == null) {
-          ensureResultsIsMutable();
-          results_.add(index, builderForValue.build());
+      public Builder addMessages(
+          int index, com.example.grpc.TaskMessage.StringListResponse.Builder builderForValue) {
+        if (messagesBuilder_ == null) {
+          ensureMessagesIsMutable();
+          messages_.add(index, builderForValue.build());
           onChanged();
         } else {
-          resultsBuilder_.addMessage(index, builderForValue.build());
+          messagesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public Builder addAllResults(
-          java.lang.Iterable<? extends com.example.grpc.TaskMessage.TaskResult> values) {
-        if (resultsBuilder_ == null) {
-          ensureResultsIsMutable();
+      public Builder addAllMessages(
+          java.lang.Iterable<? extends com.example.grpc.TaskMessage.StringListResponse> values) {
+        if (messagesBuilder_ == null) {
+          ensureMessagesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, results_);
+              values, messages_);
           onChanged();
         } else {
-          resultsBuilder_.addAllMessages(values);
+          messagesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public Builder clearResults() {
-        if (resultsBuilder_ == null) {
-          results_ = java.util.Collections.emptyList();
+      public Builder clearMessages() {
+        if (messagesBuilder_ == null) {
+          messages_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          resultsBuilder_.clear();
+          messagesBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public Builder removeResults(int index) {
-        if (resultsBuilder_ == null) {
-          ensureResultsIsMutable();
-          results_.remove(index);
+      public Builder removeMessages(int index) {
+        if (messagesBuilder_ == null) {
+          ensureMessagesIsMutable();
+          messages_.remove(index);
           onChanged();
         } else {
-          resultsBuilder_.remove(index);
+          messagesBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public com.example.grpc.TaskMessage.TaskResult.Builder getResultsBuilder(
+      public com.example.grpc.TaskMessage.StringListResponse.Builder getMessagesBuilder(
           int index) {
-        return getResultsFieldBuilder().getBuilder(index);
+        return getMessagesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public com.example.grpc.TaskMessage.TaskResultOrBuilder getResultsOrBuilder(
+      public com.example.grpc.TaskMessage.StringListResponseOrBuilder getMessagesOrBuilder(
           int index) {
-        if (resultsBuilder_ == null) {
-          return results_.get(index);  } else {
-          return resultsBuilder_.getMessageOrBuilder(index);
+        if (messagesBuilder_ == null) {
+          return messages_.get(index);  } else {
+          return messagesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public java.util.List<? extends com.example.grpc.TaskMessage.TaskResultOrBuilder> 
-           getResultsOrBuilderList() {
-        if (resultsBuilder_ != null) {
-          return resultsBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends com.example.grpc.TaskMessage.StringListResponseOrBuilder> 
+           getMessagesOrBuilderList() {
+        if (messagesBuilder_ != null) {
+          return messagesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(results_);
+          return java.util.Collections.unmodifiableList(messages_);
         }
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public com.example.grpc.TaskMessage.TaskResult.Builder addResultsBuilder() {
-        return getResultsFieldBuilder().addBuilder(
-            com.example.grpc.TaskMessage.TaskResult.getDefaultInstance());
+      public com.example.grpc.TaskMessage.StringListResponse.Builder addMessagesBuilder() {
+        return getMessagesFieldBuilder().addBuilder(
+            com.example.grpc.TaskMessage.StringListResponse.getDefaultInstance());
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public com.example.grpc.TaskMessage.TaskResult.Builder addResultsBuilder(
+      public com.example.grpc.TaskMessage.StringListResponse.Builder addMessagesBuilder(
           int index) {
-        return getResultsFieldBuilder().addBuilder(
-            index, com.example.grpc.TaskMessage.TaskResult.getDefaultInstance());
+        return getMessagesFieldBuilder().addBuilder(
+            index, com.example.grpc.TaskMessage.StringListResponse.getDefaultInstance());
       }
       /**
-       * <code>repeated .task.TaskResult results = 1;</code>
+       * <code>repeated .task.StringListResponse messages = 1;</code>
        */
-      public java.util.List<com.example.grpc.TaskMessage.TaskResult.Builder> 
-           getResultsBuilderList() {
-        return getResultsFieldBuilder().getBuilderList();
+      public java.util.List<com.example.grpc.TaskMessage.StringListResponse.Builder> 
+           getMessagesBuilderList() {
+        return getMessagesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.example.grpc.TaskMessage.TaskResult, com.example.grpc.TaskMessage.TaskResult.Builder, com.example.grpc.TaskMessage.TaskResultOrBuilder> 
-          getResultsFieldBuilder() {
-        if (resultsBuilder_ == null) {
-          resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.example.grpc.TaskMessage.TaskResult, com.example.grpc.TaskMessage.TaskResult.Builder, com.example.grpc.TaskMessage.TaskResultOrBuilder>(
-                  results_,
+          com.example.grpc.TaskMessage.StringListResponse, com.example.grpc.TaskMessage.StringListResponse.Builder, com.example.grpc.TaskMessage.StringListResponseOrBuilder> 
+          getMessagesFieldBuilder() {
+        if (messagesBuilder_ == null) {
+          messagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.example.grpc.TaskMessage.StringListResponse, com.example.grpc.TaskMessage.StringListResponse.Builder, com.example.grpc.TaskMessage.StringListResponseOrBuilder>(
+                  messages_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          results_ = null;
+          messages_ = null;
         }
-        return resultsBuilder_;
+        return messagesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1647,48 +1753,686 @@ public final class TaskMessage {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:task.TaskResponse)
+      // @@protoc_insertion_point(builder_scope:task.ListStringListResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:task.TaskResponse)
-    private static final com.example.grpc.TaskMessage.TaskResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:task.ListStringListResponse)
+    private static final com.example.grpc.TaskMessage.ListStringListResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.grpc.TaskMessage.TaskResponse();
+      DEFAULT_INSTANCE = new com.example.grpc.TaskMessage.ListStringListResponse();
     }
 
-    public static com.example.grpc.TaskMessage.TaskResponse getDefaultInstance() {
+    public static com.example.grpc.TaskMessage.ListStringListResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TaskResponse>
-        PARSER = new com.google.protobuf.AbstractParser<TaskResponse>() {
+    private static final com.google.protobuf.Parser<ListStringListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListStringListResponse>() {
       @java.lang.Override
-      public TaskResponse parsePartialFrom(
+      public ListStringListResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TaskResponse(input, extensionRegistry);
+        return new ListStringListResponse(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<TaskResponse> parser() {
+    public static com.google.protobuf.Parser<ListStringListResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<TaskResponse> getParserForType() {
+    public com.google.protobuf.Parser<ListStringListResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.example.grpc.TaskMessage.TaskResponse getDefaultInstanceForType() {
+    public com.example.grpc.TaskMessage.ListStringListResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface TaskResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:task.TaskResult)
+  public interface StringListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:task.StringListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string messages = 1;</code>
+     * @return A list containing the messages.
+     */
+    java.util.List<java.lang.String>
+        getMessagesList();
+    /**
+     * <code>repeated string messages = 1;</code>
+     * @return The count of messages.
+     */
+    int getMessagesCount();
+    /**
+     * <code>repeated string messages = 1;</code>
+     * @param index The index of the element to return.
+     * @return The messages at the given index.
+     */
+    java.lang.String getMessages(int index);
+    /**
+     * <code>repeated string messages = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the messages at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMessagesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code task.StringListResponse}
+   */
+  public static final class StringListResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:task.StringListResponse)
+      StringListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StringListResponse.newBuilder() to construct.
+    private StringListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StringListResponse() {
+      messages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StringListResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StringListResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                messages_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              messages_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          messages_ = messages_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.example.grpc.TaskMessage.internal_static_task_StringListResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.example.grpc.TaskMessage.internal_static_task_StringListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.example.grpc.TaskMessage.StringListResponse.class, com.example.grpc.TaskMessage.StringListResponse.Builder.class);
+    }
+
+    public static final int MESSAGES_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList messages_;
+    /**
+     * <code>repeated string messages = 1;</code>
+     * @return A list containing the messages.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMessagesList() {
+      return messages_;
+    }
+    /**
+     * <code>repeated string messages = 1;</code>
+     * @return The count of messages.
+     */
+    public int getMessagesCount() {
+      return messages_.size();
+    }
+    /**
+     * <code>repeated string messages = 1;</code>
+     * @param index The index of the element to return.
+     * @return The messages at the given index.
+     */
+    public java.lang.String getMessages(int index) {
+      return messages_.get(index);
+    }
+    /**
+     * <code>repeated string messages = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the messages at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMessagesBytes(int index) {
+      return messages_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < messages_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, messages_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < messages_.size(); i++) {
+          dataSize += computeStringSizeNoTag(messages_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMessagesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.example.grpc.TaskMessage.StringListResponse)) {
+        return super.equals(obj);
+      }
+      com.example.grpc.TaskMessage.StringListResponse other = (com.example.grpc.TaskMessage.StringListResponse) obj;
+
+      if (!getMessagesList()
+          .equals(other.getMessagesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMessagesCount() > 0) {
+        hash = (37 * hash) + MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getMessagesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.example.grpc.TaskMessage.StringListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.grpc.TaskMessage.StringListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.grpc.TaskMessage.StringListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.grpc.TaskMessage.StringListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.grpc.TaskMessage.StringListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.grpc.TaskMessage.StringListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.grpc.TaskMessage.StringListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.example.grpc.TaskMessage.StringListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.example.grpc.TaskMessage.StringListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.example.grpc.TaskMessage.StringListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.example.grpc.TaskMessage.StringListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.example.grpc.TaskMessage.StringListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.example.grpc.TaskMessage.StringListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code task.StringListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:task.StringListResponse)
+        com.example.grpc.TaskMessage.StringListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.example.grpc.TaskMessage.internal_static_task_StringListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.example.grpc.TaskMessage.internal_static_task_StringListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.example.grpc.TaskMessage.StringListResponse.class, com.example.grpc.TaskMessage.StringListResponse.Builder.class);
+      }
+
+      // Construct using com.example.grpc.TaskMessage.StringListResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        messages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.example.grpc.TaskMessage.internal_static_task_StringListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.example.grpc.TaskMessage.StringListResponse getDefaultInstanceForType() {
+        return com.example.grpc.TaskMessage.StringListResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.example.grpc.TaskMessage.StringListResponse build() {
+        com.example.grpc.TaskMessage.StringListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.example.grpc.TaskMessage.StringListResponse buildPartial() {
+        com.example.grpc.TaskMessage.StringListResponse result = new com.example.grpc.TaskMessage.StringListResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          messages_ = messages_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.messages_ = messages_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.example.grpc.TaskMessage.StringListResponse) {
+          return mergeFrom((com.example.grpc.TaskMessage.StringListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.example.grpc.TaskMessage.StringListResponse other) {
+        if (other == com.example.grpc.TaskMessage.StringListResponse.getDefaultInstance()) return this;
+        if (!other.messages_.isEmpty()) {
+          if (messages_.isEmpty()) {
+            messages_ = other.messages_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureMessagesIsMutable();
+            messages_.addAll(other.messages_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.example.grpc.TaskMessage.StringListResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.example.grpc.TaskMessage.StringListResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList messages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureMessagesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          messages_ = new com.google.protobuf.LazyStringArrayList(messages_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string messages = 1;</code>
+       * @return A list containing the messages.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMessagesList() {
+        return messages_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string messages = 1;</code>
+       * @return The count of messages.
+       */
+      public int getMessagesCount() {
+        return messages_.size();
+      }
+      /**
+       * <code>repeated string messages = 1;</code>
+       * @param index The index of the element to return.
+       * @return The messages at the given index.
+       */
+      public java.lang.String getMessages(int index) {
+        return messages_.get(index);
+      }
+      /**
+       * <code>repeated string messages = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the messages at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMessagesBytes(int index) {
+        return messages_.getByteString(index);
+      }
+      /**
+       * <code>repeated string messages = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The messages to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessages(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMessagesIsMutable();
+        messages_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string messages = 1;</code>
+       * @param value The messages to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMessages(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMessagesIsMutable();
+        messages_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string messages = 1;</code>
+       * @param values The messages to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMessages(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMessagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, messages_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string messages = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessages() {
+        messages_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string messages = 1;</code>
+       * @param value The bytes of the messages to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMessagesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureMessagesIsMutable();
+        messages_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:task.StringListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:task.StringListResponse)
+    private static final com.example.grpc.TaskMessage.StringListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.example.grpc.TaskMessage.StringListResponse();
+    }
+
+    public static com.example.grpc.TaskMessage.StringListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StringListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<StringListResponse>() {
+      @java.lang.Override
+      public StringListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StringListResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StringListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StringListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.example.grpc.TaskMessage.StringListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MapResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:task.MapResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1726,25 +2470,25 @@ public final class TaskMessage {
         java.lang.String key);
   }
   /**
-   * Protobuf type {@code task.TaskResult}
+   * Protobuf type {@code task.MapResponse}
    */
-  public static final class TaskResult extends
+  public static final class MapResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:task.TaskResult)
-      TaskResultOrBuilder {
+      // @@protoc_insertion_point(message_implements:task.MapResponse)
+      MapResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use TaskResult.newBuilder() to construct.
-    private TaskResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use MapResponse.newBuilder() to construct.
+    private MapResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private TaskResult() {
+    private MapResponse() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new TaskResult();
+      return new MapResponse();
     }
 
     @java.lang.Override
@@ -1752,7 +2496,7 @@ public final class TaskMessage {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TaskResult(
+    private MapResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1805,7 +2549,7 @@ public final class TaskMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.example.grpc.TaskMessage.internal_static_task_TaskResult_descriptor;
+      return com.example.grpc.TaskMessage.internal_static_task_MapResponse_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -1823,9 +2567,9 @@ public final class TaskMessage {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.grpc.TaskMessage.internal_static_task_TaskResult_fieldAccessorTable
+      return com.example.grpc.TaskMessage.internal_static_task_MapResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.grpc.TaskMessage.TaskResult.class, com.example.grpc.TaskMessage.TaskResult.Builder.class);
+              com.example.grpc.TaskMessage.MapResponse.class, com.example.grpc.TaskMessage.MapResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -1834,7 +2578,7 @@ public final class TaskMessage {
           java.lang.String, java.lang.Integer> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.Integer>newDefaultInstance(
-                  com.example.grpc.TaskMessage.internal_static_task_TaskResult_ResultEntry_descriptor, 
+                  com.example.grpc.TaskMessage.internal_static_task_MapResponse_ResultEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.INT32,
@@ -1958,10 +2702,10 @@ public final class TaskMessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.grpc.TaskMessage.TaskResult)) {
+      if (!(obj instanceof com.example.grpc.TaskMessage.MapResponse)) {
         return super.equals(obj);
       }
-      com.example.grpc.TaskMessage.TaskResult other = (com.example.grpc.TaskMessage.TaskResult) obj;
+      com.example.grpc.TaskMessage.MapResponse other = (com.example.grpc.TaskMessage.MapResponse) obj;
 
       if (!internalGetResult().equals(
           other.internalGetResult())) return false;
@@ -1985,69 +2729,69 @@ public final class TaskMessage {
       return hash;
     }
 
-    public static com.example.grpc.TaskMessage.TaskResult parseFrom(
+    public static com.example.grpc.TaskMessage.MapResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.grpc.TaskMessage.TaskResult parseFrom(
+    public static com.example.grpc.TaskMessage.MapResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskResult parseFrom(
+    public static com.example.grpc.TaskMessage.MapResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.grpc.TaskMessage.TaskResult parseFrom(
+    public static com.example.grpc.TaskMessage.MapResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskResult parseFrom(byte[] data)
+    public static com.example.grpc.TaskMessage.MapResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.grpc.TaskMessage.TaskResult parseFrom(
+    public static com.example.grpc.TaskMessage.MapResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskResult parseFrom(java.io.InputStream input)
+    public static com.example.grpc.TaskMessage.MapResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.grpc.TaskMessage.TaskResult parseFrom(
+    public static com.example.grpc.TaskMessage.MapResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskResult parseDelimitedFrom(java.io.InputStream input)
+    public static com.example.grpc.TaskMessage.MapResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.grpc.TaskMessage.TaskResult parseDelimitedFrom(
+    public static com.example.grpc.TaskMessage.MapResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.grpc.TaskMessage.TaskResult parseFrom(
+    public static com.example.grpc.TaskMessage.MapResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.grpc.TaskMessage.TaskResult parseFrom(
+    public static com.example.grpc.TaskMessage.MapResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2060,7 +2804,7 @@ public final class TaskMessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.grpc.TaskMessage.TaskResult prototype) {
+    public static Builder newBuilder(com.example.grpc.TaskMessage.MapResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2076,15 +2820,15 @@ public final class TaskMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code task.TaskResult}
+     * Protobuf type {@code task.MapResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:task.TaskResult)
-        com.example.grpc.TaskMessage.TaskResultOrBuilder {
+        // @@protoc_insertion_point(builder_implements:task.MapResponse)
+        com.example.grpc.TaskMessage.MapResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.example.grpc.TaskMessage.internal_static_task_TaskResult_descriptor;
+        return com.example.grpc.TaskMessage.internal_static_task_MapResponse_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -2112,12 +2856,12 @@ public final class TaskMessage {
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.grpc.TaskMessage.internal_static_task_TaskResult_fieldAccessorTable
+        return com.example.grpc.TaskMessage.internal_static_task_MapResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.grpc.TaskMessage.TaskResult.class, com.example.grpc.TaskMessage.TaskResult.Builder.class);
+                com.example.grpc.TaskMessage.MapResponse.class, com.example.grpc.TaskMessage.MapResponse.Builder.class);
       }
 
-      // Construct using com.example.grpc.TaskMessage.TaskResult.newBuilder()
+      // Construct using com.example.grpc.TaskMessage.MapResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2142,17 +2886,17 @@ public final class TaskMessage {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.grpc.TaskMessage.internal_static_task_TaskResult_descriptor;
+        return com.example.grpc.TaskMessage.internal_static_task_MapResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.example.grpc.TaskMessage.TaskResult getDefaultInstanceForType() {
-        return com.example.grpc.TaskMessage.TaskResult.getDefaultInstance();
+      public com.example.grpc.TaskMessage.MapResponse getDefaultInstanceForType() {
+        return com.example.grpc.TaskMessage.MapResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.example.grpc.TaskMessage.TaskResult build() {
-        com.example.grpc.TaskMessage.TaskResult result = buildPartial();
+      public com.example.grpc.TaskMessage.MapResponse build() {
+        com.example.grpc.TaskMessage.MapResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2160,8 +2904,8 @@ public final class TaskMessage {
       }
 
       @java.lang.Override
-      public com.example.grpc.TaskMessage.TaskResult buildPartial() {
-        com.example.grpc.TaskMessage.TaskResult result = new com.example.grpc.TaskMessage.TaskResult(this);
+      public com.example.grpc.TaskMessage.MapResponse buildPartial() {
+        com.example.grpc.TaskMessage.MapResponse result = new com.example.grpc.TaskMessage.MapResponse(this);
         int from_bitField0_ = bitField0_;
         result.result_ = internalGetResult();
         result.result_.makeImmutable();
@@ -2203,16 +2947,16 @@ public final class TaskMessage {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.grpc.TaskMessage.TaskResult) {
-          return mergeFrom((com.example.grpc.TaskMessage.TaskResult)other);
+        if (other instanceof com.example.grpc.TaskMessage.MapResponse) {
+          return mergeFrom((com.example.grpc.TaskMessage.MapResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.grpc.TaskMessage.TaskResult other) {
-        if (other == com.example.grpc.TaskMessage.TaskResult.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.example.grpc.TaskMessage.MapResponse other) {
+        if (other == com.example.grpc.TaskMessage.MapResponse.getDefaultInstance()) return this;
         internalGetMutableResult().mergeFrom(
             other.internalGetResult());
         this.mergeUnknownFields(other.unknownFields);
@@ -2230,11 +2974,11 @@ public final class TaskMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.grpc.TaskMessage.TaskResult parsedMessage = null;
+        com.example.grpc.TaskMessage.MapResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.grpc.TaskMessage.TaskResult) e.getUnfinishedMessage();
+          parsedMessage = (com.example.grpc.TaskMessage.MapResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2385,66 +3129,76 @@ public final class TaskMessage {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:task.TaskResult)
+      // @@protoc_insertion_point(builder_scope:task.MapResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:task.TaskResult)
-    private static final com.example.grpc.TaskMessage.TaskResult DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:task.MapResponse)
+    private static final com.example.grpc.TaskMessage.MapResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.grpc.TaskMessage.TaskResult();
+      DEFAULT_INSTANCE = new com.example.grpc.TaskMessage.MapResponse();
     }
 
-    public static com.example.grpc.TaskMessage.TaskResult getDefaultInstance() {
+    public static com.example.grpc.TaskMessage.MapResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TaskResult>
-        PARSER = new com.google.protobuf.AbstractParser<TaskResult>() {
+    private static final com.google.protobuf.Parser<MapResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MapResponse>() {
       @java.lang.Override
-      public TaskResult parsePartialFrom(
+      public MapResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TaskResult(input, extensionRegistry);
+        return new MapResponse(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<TaskResult> parser() {
+    public static com.google.protobuf.Parser<MapResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<TaskResult> getParserForType() {
+    public com.google.protobuf.Parser<MapResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.example.grpc.TaskMessage.TaskResult getDefaultInstanceForType() {
+    public com.example.grpc.TaskMessage.MapResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_task_TaskRequest_descriptor;
+    internal_static_task_Empty_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_task_TaskRequest_fieldAccessorTable;
+      internal_static_task_Empty_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_task_TaskResponse_descriptor;
+    internal_static_task_StringResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_task_TaskResponse_fieldAccessorTable;
+      internal_static_task_StringResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_task_TaskResult_descriptor;
+    internal_static_task_ListStringListResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_task_TaskResult_fieldAccessorTable;
+      internal_static_task_ListStringListResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_task_TaskResult_ResultEntry_descriptor;
+    internal_static_task_StringListResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_task_TaskResult_ResultEntry_fieldAccessorTable;
+      internal_static_task_StringListResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_task_MapResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_task_MapResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_task_MapResponse_ResultEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_task_MapResponse_ResultEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2454,44 +3208,61 @@ public final class TaskMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ntask.proto\022\004task\"H\n\013TaskRequest\022\022\n\npat" +
-      "hPrefix\030\001 \001(\t\022\022\n\npathSuffix\030\002 \001(\t\022\021\n\tmax" +
-      "Number\030\003 \001(\005\"1\n\014TaskResponse\022!\n\007results\030" +
-      "\001 \003(\0132\020.task.TaskResult\"i\n\nTaskResult\022,\n" +
-      "\006result\030\001 \003(\0132\034.task.TaskResult.ResultEn" +
-      "try\032-\n\013ResultEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\005:\0028\0012F\n\013TaskService\0227\n\014processTask" +
-      "s\022\021.task.TaskRequest\032\022.task.TaskResponse" +
-      "\"\000B!\n\020com.example.grpcB\013TaskMessageP\000b\006p" +
-      "roto3"
+      "\n\ntask.proto\022\004task\"\007\n\005Empty\"!\n\016StringRes" +
+      "ponse\022\017\n\007message\030\001 \001(\t\"D\n\026ListStringList" +
+      "Response\022*\n\010messages\030\001 \003(\0132\030.task.String" +
+      "ListResponse\"&\n\022StringListResponse\022\020\n\010me" +
+      "ssages\030\001 \003(\t\"k\n\013MapResponse\022-\n\006result\030\001 " +
+      "\003(\0132\035.task.MapResponse.ResultEntry\032-\n\013Re" +
+      "sultEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\005:\0028" +
+      "\0012\214\002\n\013TaskService\022;\n\024EmptyRequestToStrin" +
+      "g\022\013.task.Empty\032\024.task.StringResponse\"\000\022K" +
+      "\n\034EmptyRequestToListStringList\022\013.task.Em" +
+      "pty\032\034.task.ListStringListResponse\"\000\022C\n\030E" +
+      "mptyRequestToStringList\022\013.task.Empty\032\030.t" +
+      "ask.StringListResponse\"\000\022.\n\nEmptyToMap\022\013" +
+      ".task.Empty\032\021.task.MapResponse\"\000B!\n\020com." +
+      "example.grpcB\013TaskMessageP\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_task_TaskRequest_descriptor =
+    internal_static_task_Empty_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_task_TaskRequest_fieldAccessorTable = new
+    internal_static_task_Empty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_task_TaskRequest_descriptor,
-        new java.lang.String[] { "PathPrefix", "PathSuffix", "MaxNumber", });
-    internal_static_task_TaskResponse_descriptor =
+        internal_static_task_Empty_descriptor,
+        new java.lang.String[] { });
+    internal_static_task_StringResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_task_TaskResponse_fieldAccessorTable = new
+    internal_static_task_StringResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_task_TaskResponse_descriptor,
-        new java.lang.String[] { "Results", });
-    internal_static_task_TaskResult_descriptor =
+        internal_static_task_StringResponse_descriptor,
+        new java.lang.String[] { "Message", });
+    internal_static_task_ListStringListResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_task_TaskResult_fieldAccessorTable = new
+    internal_static_task_ListStringListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_task_TaskResult_descriptor,
+        internal_static_task_ListStringListResponse_descriptor,
+        new java.lang.String[] { "Messages", });
+    internal_static_task_StringListResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_task_StringListResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_task_StringListResponse_descriptor,
+        new java.lang.String[] { "Messages", });
+    internal_static_task_MapResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_task_MapResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_task_MapResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_task_TaskResult_ResultEntry_descriptor =
-      internal_static_task_TaskResult_descriptor.getNestedTypes().get(0);
-    internal_static_task_TaskResult_ResultEntry_fieldAccessorTable = new
+    internal_static_task_MapResponse_ResultEntry_descriptor =
+      internal_static_task_MapResponse_descriptor.getNestedTypes().get(0);
+    internal_static_task_MapResponse_ResultEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_task_TaskResult_ResultEntry_descriptor,
+        internal_static_task_MapResponse_ResultEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
   }
 

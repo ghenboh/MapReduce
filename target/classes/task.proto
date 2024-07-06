@@ -7,19 +7,33 @@ option java_outer_classname = "TaskMessage";
 option java_package = "com.example.grpc";
 
 service TaskService {
-  rpc processTasks(TaskRequest) returns (TaskResponse) {}
+  // 空请求体-String 响应
+  rpc EmptyRequestToString(Empty) returns (StringResponse) {}
+  
+  // 空请求体-List<String> 响应
+  rpc EmptyRequestToListStringList(Empty) returns (ListStringListResponse) {}
+  
+  // 空请求体-List<List<String>> 响应
+  rpc EmptyRequestToStringList(Empty) returns (StringListResponse) {}
+  
+  // 空请求体-Map<String, List<Integer>> 响应
+  rpc EmptyToMap(Empty) returns (MapResponse) {}
 }
 
-message TaskRequest {
-  string pathPrefix = 1;  // 路径前缀
-  string pathSuffix = 2;  // 路径后缀
-  int32 maxNumber = 3;    // 需要处理的最大编号
+message Empty {}
+
+message StringResponse {
+  string message = 1;
 }
 
-message TaskResponse {
-  repeated TaskResult results = 1;
+message ListStringListResponse {
+  repeated StringListResponse messages = 1;
 }
 
-message TaskResult {
+message StringListResponse {
+  repeated string messages = 1;
+}
+
+message MapResponse {
   map<string, int32> result = 1;
 }

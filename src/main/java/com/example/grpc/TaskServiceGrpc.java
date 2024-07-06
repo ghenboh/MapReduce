@@ -27,35 +27,128 @@ public final class TaskServiceGrpc {
   public static final String SERVICE_NAME = "task.TaskService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.TaskRequest,
-      com.example.grpc.TaskMessage.TaskResponse> getProcessTasksMethod;
+  private static volatile io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty,
+      com.example.grpc.TaskMessage.StringResponse> getEmptyRequestToStringMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "processTasks",
-      requestType = com.example.grpc.TaskMessage.TaskRequest.class,
-      responseType = com.example.grpc.TaskMessage.TaskResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "EmptyRequestToString",
+      requestType = com.example.grpc.TaskMessage.Empty.class,
+      responseType = com.example.grpc.TaskMessage.StringResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.TaskRequest,
-      com.example.grpc.TaskMessage.TaskResponse> getProcessTasksMethod() {
-    io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.TaskRequest, com.example.grpc.TaskMessage.TaskResponse> getProcessTasksMethod;
-    if ((getProcessTasksMethod = TaskServiceGrpc.getProcessTasksMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty,
+      com.example.grpc.TaskMessage.StringResponse> getEmptyRequestToStringMethod() {
+    io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty, com.example.grpc.TaskMessage.StringResponse> getEmptyRequestToStringMethod;
+    if ((getEmptyRequestToStringMethod = TaskServiceGrpc.getEmptyRequestToStringMethod) == null) {
       synchronized (TaskServiceGrpc.class) {
-        if ((getProcessTasksMethod = TaskServiceGrpc.getProcessTasksMethod) == null) {
-          TaskServiceGrpc.getProcessTasksMethod = getProcessTasksMethod =
-              io.grpc.MethodDescriptor.<com.example.grpc.TaskMessage.TaskRequest, com.example.grpc.TaskMessage.TaskResponse>newBuilder()
+        if ((getEmptyRequestToStringMethod = TaskServiceGrpc.getEmptyRequestToStringMethod) == null) {
+          TaskServiceGrpc.getEmptyRequestToStringMethod = getEmptyRequestToStringMethod =
+              io.grpc.MethodDescriptor.<com.example.grpc.TaskMessage.Empty, com.example.grpc.TaskMessage.StringResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "processTasks"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EmptyRequestToString"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.example.grpc.TaskMessage.TaskRequest.getDefaultInstance()))
+                  com.example.grpc.TaskMessage.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.example.grpc.TaskMessage.TaskResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new TaskServiceMethodDescriptorSupplier("processTasks"))
+                  com.example.grpc.TaskMessage.StringResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TaskServiceMethodDescriptorSupplier("EmptyRequestToString"))
               .build();
         }
       }
     }
-    return getProcessTasksMethod;
+    return getEmptyRequestToStringMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty,
+      com.example.grpc.TaskMessage.ListStringListResponse> getEmptyRequestToListStringListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EmptyRequestToListStringList",
+      requestType = com.example.grpc.TaskMessage.Empty.class,
+      responseType = com.example.grpc.TaskMessage.ListStringListResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty,
+      com.example.grpc.TaskMessage.ListStringListResponse> getEmptyRequestToListStringListMethod() {
+    io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty, com.example.grpc.TaskMessage.ListStringListResponse> getEmptyRequestToListStringListMethod;
+    if ((getEmptyRequestToListStringListMethod = TaskServiceGrpc.getEmptyRequestToListStringListMethod) == null) {
+      synchronized (TaskServiceGrpc.class) {
+        if ((getEmptyRequestToListStringListMethod = TaskServiceGrpc.getEmptyRequestToListStringListMethod) == null) {
+          TaskServiceGrpc.getEmptyRequestToListStringListMethod = getEmptyRequestToListStringListMethod =
+              io.grpc.MethodDescriptor.<com.example.grpc.TaskMessage.Empty, com.example.grpc.TaskMessage.ListStringListResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EmptyRequestToListStringList"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.TaskMessage.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.TaskMessage.ListStringListResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TaskServiceMethodDescriptorSupplier("EmptyRequestToListStringList"))
+              .build();
+        }
+      }
+    }
+    return getEmptyRequestToListStringListMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty,
+      com.example.grpc.TaskMessage.StringListResponse> getEmptyRequestToStringListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EmptyRequestToStringList",
+      requestType = com.example.grpc.TaskMessage.Empty.class,
+      responseType = com.example.grpc.TaskMessage.StringListResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty,
+      com.example.grpc.TaskMessage.StringListResponse> getEmptyRequestToStringListMethod() {
+    io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty, com.example.grpc.TaskMessage.StringListResponse> getEmptyRequestToStringListMethod;
+    if ((getEmptyRequestToStringListMethod = TaskServiceGrpc.getEmptyRequestToStringListMethod) == null) {
+      synchronized (TaskServiceGrpc.class) {
+        if ((getEmptyRequestToStringListMethod = TaskServiceGrpc.getEmptyRequestToStringListMethod) == null) {
+          TaskServiceGrpc.getEmptyRequestToStringListMethod = getEmptyRequestToStringListMethod =
+              io.grpc.MethodDescriptor.<com.example.grpc.TaskMessage.Empty, com.example.grpc.TaskMessage.StringListResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EmptyRequestToStringList"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.TaskMessage.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.TaskMessage.StringListResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TaskServiceMethodDescriptorSupplier("EmptyRequestToStringList"))
+              .build();
+        }
+      }
+    }
+    return getEmptyRequestToStringListMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty,
+      com.example.grpc.TaskMessage.MapResponse> getEmptyToMapMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EmptyToMap",
+      requestType = com.example.grpc.TaskMessage.Empty.class,
+      responseType = com.example.grpc.TaskMessage.MapResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty,
+      com.example.grpc.TaskMessage.MapResponse> getEmptyToMapMethod() {
+    io.grpc.MethodDescriptor<com.example.grpc.TaskMessage.Empty, com.example.grpc.TaskMessage.MapResponse> getEmptyToMapMethod;
+    if ((getEmptyToMapMethod = TaskServiceGrpc.getEmptyToMapMethod) == null) {
+      synchronized (TaskServiceGrpc.class) {
+        if ((getEmptyToMapMethod = TaskServiceGrpc.getEmptyToMapMethod) == null) {
+          TaskServiceGrpc.getEmptyToMapMethod = getEmptyToMapMethod =
+              io.grpc.MethodDescriptor.<com.example.grpc.TaskMessage.Empty, com.example.grpc.TaskMessage.MapResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EmptyToMap"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.TaskMessage.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.TaskMessage.MapResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TaskServiceMethodDescriptorSupplier("EmptyToMap"))
+              .build();
+        }
+      }
+    }
+    return getEmptyToMapMethod;
   }
 
   /**
@@ -107,21 +200,75 @@ public final class TaskServiceGrpc {
   public static abstract class TaskServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * 空请求体-String 响应
+     * </pre>
      */
-    public void processTasks(com.example.grpc.TaskMessage.TaskRequest request,
-        io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.TaskResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getProcessTasksMethod(), responseObserver);
+    public void emptyRequestToString(com.example.grpc.TaskMessage.Empty request,
+        io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.StringResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getEmptyRequestToStringMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-List&lt;String&gt; 响应
+     * </pre>
+     */
+    public void emptyRequestToListStringList(com.example.grpc.TaskMessage.Empty request,
+        io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.ListStringListResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getEmptyRequestToListStringListMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-List&lt;List&lt;String&gt;&gt; 响应
+     * </pre>
+     */
+    public void emptyRequestToStringList(com.example.grpc.TaskMessage.Empty request,
+        io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.StringListResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getEmptyRequestToStringListMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-Map&lt;String, List&lt;Integer&gt;&gt; 响应
+     * </pre>
+     */
+    public void emptyToMap(com.example.grpc.TaskMessage.Empty request,
+        io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.MapResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getEmptyToMapMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getProcessTasksMethod(),
+            getEmptyRequestToStringMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.example.grpc.TaskMessage.TaskRequest,
-                com.example.grpc.TaskMessage.TaskResponse>(
-                  this, METHODID_PROCESS_TASKS)))
+                com.example.grpc.TaskMessage.Empty,
+                com.example.grpc.TaskMessage.StringResponse>(
+                  this, METHODID_EMPTY_REQUEST_TO_STRING)))
+          .addMethod(
+            getEmptyRequestToListStringListMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.example.grpc.TaskMessage.Empty,
+                com.example.grpc.TaskMessage.ListStringListResponse>(
+                  this, METHODID_EMPTY_REQUEST_TO_LIST_STRING_LIST)))
+          .addMethod(
+            getEmptyRequestToStringListMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.example.grpc.TaskMessage.Empty,
+                com.example.grpc.TaskMessage.StringListResponse>(
+                  this, METHODID_EMPTY_REQUEST_TO_STRING_LIST)))
+          .addMethod(
+            getEmptyToMapMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.example.grpc.TaskMessage.Empty,
+                com.example.grpc.TaskMessage.MapResponse>(
+                  this, METHODID_EMPTY_TO_MAP)))
           .build();
     }
   }
@@ -141,11 +288,47 @@ public final class TaskServiceGrpc {
     }
 
     /**
+     * <pre>
+     * 空请求体-String 响应
+     * </pre>
      */
-    public void processTasks(com.example.grpc.TaskMessage.TaskRequest request,
-        io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.TaskResponse> responseObserver) {
+    public void emptyRequestToString(com.example.grpc.TaskMessage.Empty request,
+        io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.StringResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getProcessTasksMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getEmptyRequestToStringMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-List&lt;String&gt; 响应
+     * </pre>
+     */
+    public void emptyRequestToListStringList(com.example.grpc.TaskMessage.Empty request,
+        io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.ListStringListResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getEmptyRequestToListStringListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-List&lt;List&lt;String&gt;&gt; 响应
+     * </pre>
+     */
+    public void emptyRequestToStringList(com.example.grpc.TaskMessage.Empty request,
+        io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.StringListResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getEmptyRequestToStringListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-Map&lt;String, List&lt;Integer&gt;&gt; 响应
+     * </pre>
+     */
+    public void emptyToMap(com.example.grpc.TaskMessage.Empty request,
+        io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.MapResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getEmptyToMapMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -164,10 +347,43 @@ public final class TaskServiceGrpc {
     }
 
     /**
+     * <pre>
+     * 空请求体-String 响应
+     * </pre>
      */
-    public com.example.grpc.TaskMessage.TaskResponse processTasks(com.example.grpc.TaskMessage.TaskRequest request) {
+    public com.example.grpc.TaskMessage.StringResponse emptyRequestToString(com.example.grpc.TaskMessage.Empty request) {
       return blockingUnaryCall(
-          getChannel(), getProcessTasksMethod(), getCallOptions(), request);
+          getChannel(), getEmptyRequestToStringMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-List&lt;String&gt; 响应
+     * </pre>
+     */
+    public com.example.grpc.TaskMessage.ListStringListResponse emptyRequestToListStringList(com.example.grpc.TaskMessage.Empty request) {
+      return blockingUnaryCall(
+          getChannel(), getEmptyRequestToListStringListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-List&lt;List&lt;String&gt;&gt; 响应
+     * </pre>
+     */
+    public com.example.grpc.TaskMessage.StringListResponse emptyRequestToStringList(com.example.grpc.TaskMessage.Empty request) {
+      return blockingUnaryCall(
+          getChannel(), getEmptyRequestToStringListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-Map&lt;String, List&lt;Integer&gt;&gt; 响应
+     * </pre>
+     */
+    public com.example.grpc.TaskMessage.MapResponse emptyToMap(com.example.grpc.TaskMessage.Empty request) {
+      return blockingUnaryCall(
+          getChannel(), getEmptyToMapMethod(), getCallOptions(), request);
     }
   }
 
@@ -186,15 +402,54 @@ public final class TaskServiceGrpc {
     }
 
     /**
+     * <pre>
+     * 空请求体-String 响应
+     * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.example.grpc.TaskMessage.TaskResponse> processTasks(
-        com.example.grpc.TaskMessage.TaskRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.example.grpc.TaskMessage.StringResponse> emptyRequestToString(
+        com.example.grpc.TaskMessage.Empty request) {
       return futureUnaryCall(
-          getChannel().newCall(getProcessTasksMethod(), getCallOptions()), request);
+          getChannel().newCall(getEmptyRequestToStringMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-List&lt;String&gt; 响应
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.grpc.TaskMessage.ListStringListResponse> emptyRequestToListStringList(
+        com.example.grpc.TaskMessage.Empty request) {
+      return futureUnaryCall(
+          getChannel().newCall(getEmptyRequestToListStringListMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-List&lt;List&lt;String&gt;&gt; 响应
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.grpc.TaskMessage.StringListResponse> emptyRequestToStringList(
+        com.example.grpc.TaskMessage.Empty request) {
+      return futureUnaryCall(
+          getChannel().newCall(getEmptyRequestToStringListMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * 空请求体-Map&lt;String, List&lt;Integer&gt;&gt; 响应
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.grpc.TaskMessage.MapResponse> emptyToMap(
+        com.example.grpc.TaskMessage.Empty request) {
+      return futureUnaryCall(
+          getChannel().newCall(getEmptyToMapMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_PROCESS_TASKS = 0;
+  private static final int METHODID_EMPTY_REQUEST_TO_STRING = 0;
+  private static final int METHODID_EMPTY_REQUEST_TO_LIST_STRING_LIST = 1;
+  private static final int METHODID_EMPTY_REQUEST_TO_STRING_LIST = 2;
+  private static final int METHODID_EMPTY_TO_MAP = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -213,9 +468,21 @@ public final class TaskServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_PROCESS_TASKS:
-          serviceImpl.processTasks((com.example.grpc.TaskMessage.TaskRequest) request,
-              (io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.TaskResponse>) responseObserver);
+        case METHODID_EMPTY_REQUEST_TO_STRING:
+          serviceImpl.emptyRequestToString((com.example.grpc.TaskMessage.Empty) request,
+              (io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.StringResponse>) responseObserver);
+          break;
+        case METHODID_EMPTY_REQUEST_TO_LIST_STRING_LIST:
+          serviceImpl.emptyRequestToListStringList((com.example.grpc.TaskMessage.Empty) request,
+              (io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.ListStringListResponse>) responseObserver);
+          break;
+        case METHODID_EMPTY_REQUEST_TO_STRING_LIST:
+          serviceImpl.emptyRequestToStringList((com.example.grpc.TaskMessage.Empty) request,
+              (io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.StringListResponse>) responseObserver);
+          break;
+        case METHODID_EMPTY_TO_MAP:
+          serviceImpl.emptyToMap((com.example.grpc.TaskMessage.Empty) request,
+              (io.grpc.stub.StreamObserver<com.example.grpc.TaskMessage.MapResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -278,7 +545,10 @@ public final class TaskServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new TaskServiceFileDescriptorSupplier())
-              .addMethod(getProcessTasksMethod())
+              .addMethod(getEmptyRequestToStringMethod())
+              .addMethod(getEmptyRequestToListStringListMethod())
+              .addMethod(getEmptyRequestToStringListMethod())
+              .addMethod(getEmptyToMapMethod())
               .build();
         }
       }

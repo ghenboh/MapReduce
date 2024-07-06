@@ -1,3 +1,8 @@
-D:\distribute\rpcdemos\target\generated-sources\protobuf\grpc-java\com\example\proto\HelloGrpc.java
-D:\distribute\rpcdemos\src\main\java\com\example\proto\Main.java
-D:\distribute\rpcdemos\target\generated-sources\protobuf\java\com\example\proto\HelloMessage.java
+D:\distribute\mapreduce\src\main\java\com\example\communication\Master.java
+D:\distribute\mapreduce\src\main\java\com\example\Main.java
+D:\distribute\mapreduce\src\main\java\com\example\communication\MapWorker.java
+D:\distribute\mapreduce\target\generated-sources\protobuf\grpc-java\com\example\grpc\TaskServiceGrpc.java
+D:\distribute\mapreduce\src\main\java\com\example\distribute\Maps.java
+D:\distribute\mapreduce\src\main\java\com\example\grpc\TaskMessage.java
+D:\distribute\mapreduce\src\main\java\com\example\grpc\TaskServiceGrpc.java
+D:\distribute\mapreduce\target\generated-sources\protobuf\java\com\example\grpc\TaskMessage.java
